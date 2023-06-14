@@ -17,4 +17,14 @@ router.get('/ice-flakes', function (req, res, next) {
     })
 })
 
+/* GET health resource */
+router.get('/health', function (req, res, next) {
+  res
+    .status(201)
+    .json({
+      health: 'ok',
+      status: 'up'
+    })
+})
+
 module.exports = router
